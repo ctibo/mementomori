@@ -1,0 +1,17 @@
+/**
+*  CATAMARAN
+* ==================================================
+*/
+/* rowdies-300 - latin */
+@font-face {
+  font-family: 'Rowdies';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/fonts/rowdies/rowdies-v15-latin-300.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('/fonts/rowdies/rowdies-v15-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/fonts/rowdies/rowdies-v15-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/fonts/rowdies/rowdies-v15-latin-300.woff') format('woff'), /* Modern Browsers */
+       url('/fonts/rowdies/rowdies-v15-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/fonts/rowdies/rowdies-v15-latin-300.svg#Rowdies') format('svg'); /* Legacy iOS */
+}

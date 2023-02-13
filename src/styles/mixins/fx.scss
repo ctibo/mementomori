@@ -1,0 +1,6 @@
+
+@mixin text-gradient() {
+  background: -webkit-linear-gradient(var(--bronze-65), var(--gold),);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

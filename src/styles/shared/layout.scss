@@ -1,0 +1,29 @@
+
+body, html {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  color: var(--text-color);
+  background: var(--bg-color);
+}
+
+.container {
+  padding: var(--container-padding);
+}
+.contained {
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+  &.small {
+    max-width: 42rem;
+  }
+}
+
+

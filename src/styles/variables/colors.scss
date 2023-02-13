@@ -1,0 +1,38 @@
+:root {
+  /**
+   * Palette
+   * ==================================================
+   */
+  // Grayscale
+  --black: #0a0a0c;
+  --gray-10: #17171c;
+  --gray-15: #23242C;
+  --gray-20: #2d2e39;
+  --gray-30: #434556;
+  --gray-35: #515761;
+  --gray-50: #747b8b;
+  --gray-60: #969BA6;
+  --gray-80: #C6CBD2;
+  --gray-90: #E7EAEE;
+  --gray-95: #F3F6FA;
+  --gray-98: #f7f8fd;
+  --white: #FFFFFF;
+
+  
+  
+  /**
+   * Text
+   * ==================================================
+   */
+  --text-color: var(--gray-15);
+
+  --link-color: var(--gray-30);
+  --link-color-hover: var(--gray-10);
+  
+  /**
+  * Ui (misc)
+  * ==================================================
+  */
+  --bg-color: var(--gray-95);
+  
+}
