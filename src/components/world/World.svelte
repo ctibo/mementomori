@@ -11,7 +11,7 @@
     Body,
     Events,
   } from 'matter-js';
-  import { createRagdoll } from 'matterjs-ragdoll';
+  import Ragdoll from './ragdoll';
   import { onMount } from 'svelte'; 
   let viewport: HTMLElement;
   let engine: Engine;
@@ -53,7 +53,7 @@
     addWalls();
     addHuman();
 
-    // setInterval(addHuman, 500)
+    setInterval(addHuman, 1000)
 
   }
 
@@ -81,7 +81,7 @@
   */
   function addWalls() {
     wallBodies = {
-      ground: Bodies.rectangle(w/2, h+50, w, 100, { isStatic: true }),
+      ground: Bodies.rectangle(w/2, h+20, w, 100, { isStatic: true }),
       left: Bodies.rectangle(-50 , h/2, 100, h, { isStatic: true }),
       right: Bodies.rectangle(w + 50 , h/2, 100, h, { isStatic: true }),
     };
@@ -95,8 +95,7 @@
   * ==================================================
   */
   function addHuman() {
-    const human = createRagdoll(0.5) as Composite;
-    Composite.translate(human, { x: w/2, y: h/4});
+    const human = Ragdoll.create(w/2, -50, 0.25) as Composite;
     Composite.add(humans, human);
   }
 
@@ -118,7 +117,7 @@
     Body.setVertices(wallBodies.ground, [{x:w/-2, y:-50}, {x:w/2, y:-50}, {x:w/2, y:50}, {x:w/-2, y:50}]);
     Body.setVertices(wallBodies.left, [{x: -50,y: h/-2}, {x: 50,y: h/-2}, {x: 50,y: h/2}, {x: -50,y: h/2}]);
     Body.setVertices(wallBodies.right, [{x: -50,y: h/-2}, {x: 50,y: h/-2}, {x: 50,y: h/2}, {x: -50,y: h/2}]);
-    Body.setPosition(wallBodies.ground, { x: w/2, y: h+50 });
+    Body.setPosition(wallBodies.ground, { x: w/2, y: h+20 });
     Body.setPosition(wallBodies.left, { x: -50, y: h/2 });
     Body.setPosition(wallBodies.right, { x: w+50, y: h/2 });
   }
@@ -148,10 +147,10 @@
     left: 0;
     width: 100%;
     height: 100%;
-    :global canvas {
+    // :global canvas {
       // position: relative;
       // z-index: 10;
-      border: 1px solid var(--black);
-    }
+      // border: 1px solid var(--black);
+    // }
   }
 </style>
