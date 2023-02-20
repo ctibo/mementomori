@@ -26,6 +26,24 @@
 
 <div class="wrapper">
 	<Header />
-	<slot></slot>
-	<Footer />
+	<div class="main">
+		<slot></slot>
+	</div>
+	<!-- <Footer /> -->
 </div>
+
+
+<style lang="scss">
+	.wrapper {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-flow: column nowrap;
+	}	
+	.main {
+		flex-grow: 10;
+	}
+</style>

@@ -19,6 +19,8 @@
   --white: #FFFFFF;
 
   
+  --primary-color: #fff8c6;
+
   
   /**
    * Text
@@ -33,6 +35,6 @@
   * Ui (misc)
   * ==================================================
   */
-  --bg-color: var(--gray-95);
+  --bg-color: var(--primary-color);
   
 }

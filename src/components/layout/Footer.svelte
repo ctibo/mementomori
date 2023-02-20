@@ -17,7 +17,5 @@
   footer {
     font-size: 0.875em;
     text-align: center;
-    padding-top: 2em;
-    padding-bottom: 1.5em;
   }
 </style>
